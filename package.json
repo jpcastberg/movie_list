@@ -1,0 +1,29 @@
+{
+  "name": "styled_components_testing",
+  "version": "1.0.0",
+  "description": "A testing ground for Styled Components",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node_modules/nodemon/bin/nodemon.js server/index.js",
+    "bundle-dev": "node_modules/webpack/bin/webpack.js -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.0",
+    "nodemon": "^1.19.0",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
