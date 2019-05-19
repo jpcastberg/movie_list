@@ -1,22 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import Heading from './Heading';
+import MovieList from './MovieList';
 import Components from './styled/Components';
-import movieData from '../exampleData';
 
 const { GlobalStyle } = Components;
 
-const App = () => {
-  const [movies, setMovies] = useState([]);
-  useEffect(() => {
-    setMovies(movies.concat(movieData));
-  }, []);
-  return (
-    <div>
-      <GlobalStyle />
-      <Heading />
-    </div>
-  );
-};
+const App = () => (
+  <div>
+    <GlobalStyle />
+    <Heading />
+    <MovieList />
+  </div>
+);
+
 
 export default App;
