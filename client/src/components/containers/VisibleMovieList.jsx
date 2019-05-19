@@ -4,7 +4,11 @@ import { addMovies } from '../../actions';
 import MovieList from '../MovieList';
 
 const getVisibleMovies = (movies = [], query) => (
-  movies.filter(movie => movie.title.includes(query))
+  movies.filter(movie => (movie.title
+    .toLowerCase()
+    .includes(
+      query.toLowerCase(),
+    )))
 );
 
 const mapStateToProps = state => ({
