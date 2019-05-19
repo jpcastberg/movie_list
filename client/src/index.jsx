@@ -4,7 +4,10 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducers';
 
-import App from './components/App';
+import Heading from './components/Heading';
+import { GlobalStyle } from './components/styled/Components';
+import MovieList from './components/containers/MovieList';
+import Search from './components/containers/Search';
 
 const store = createStore(
   rootReducer,
@@ -14,7 +17,10 @@ const store = createStore(
 
 render(
   <Provider store={store}>
-    <App />
+    <GlobalStyle />
+    <Heading />
+    <Search />
+    <MovieList />
   </Provider>,
   document.getElementById('app'),
 );

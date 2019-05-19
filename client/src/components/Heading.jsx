@@ -1,7 +1,5 @@
 import React from 'react';
-import Components from './styled/Components';
-
-const { H1, StyledHeading } = Components;
+import { H1, StyledHeading } from './styled/Components';
 
 const Heading = () => (
   <StyledHeading>

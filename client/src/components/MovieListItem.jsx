@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Components from './styled/Components';
-
-const { StyledMovieListItem } = Components;
+import { StyledMovieListItem } from './styled/Components';
 
 const MovieListItem = (props) => {
   const { movie } = props;

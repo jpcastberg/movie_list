@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SearchDisplay = ({ query, updateQuery }) => (
+const Search = ({ query, updateQuery }) => (
   <div>
     <label>
         Search Movies:
@@ -17,14 +17,14 @@ const SearchDisplay = ({ query, updateQuery }) => (
   </div>
 );
 
-SearchDisplay.defaultProps = {
+Search.defaultProps = {
   query: '',
   updateQuery: () => {},
 };
 
-SearchDisplay.propTypes = {
+Search.propTypes = {
   query: PropTypes.string,
   updateQuery: PropTypes.func,
 };
 
-export default SearchDisplay;
+export default Search;
