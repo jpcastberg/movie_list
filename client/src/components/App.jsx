@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Heading from './Heading';
-import MovieList from './MovieList';
 import Components from './styled/Components';
+import VisibleMovieList from './containers/VisibleMovieList';
+import Search from './containers/SearchContainer';
 
 const { GlobalStyle } = Components;
 
@@ -10,7 +11,8 @@ const App = () => (
   <div>
     <GlobalStyle />
     <Heading />
-    <MovieList />
+    <Search />
+    <VisibleMovieList />
   </div>
 );
 
