@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import StyledMovieListItem from './MovieListItem';
+import MovieListItem from './MovieListItem';
 import movieData from '../exampleData';
 
 const MovieList = () => {
@@ -10,7 +10,7 @@ const MovieList = () => {
   }, []);
   return (
     <div>
-      {movies.map(movie => <StyledMovieListItem key={movie.title} movie={movie} />)}
+      {movies.map(movie => <MovieListItem key={movie.title} movie={movie} />)}
     </div>
   );
 };
