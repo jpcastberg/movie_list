@@ -1,4 +1,4 @@
-const movies = [
+const movieData = [
   { title: 'Mean Girls' },
   { title: 'Hackers' },
   { title: 'The Grey' },
@@ -6,4 +6,4 @@ const movies = [
   { title: 'Ex Machina' },
 ];
 
-export default movies;
+export default movieData;
