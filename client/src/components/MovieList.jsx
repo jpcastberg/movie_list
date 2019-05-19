@@ -8,9 +8,14 @@ const MovieList = ({ movies, addMovies }) => {
   useEffect(() => {
     addMovies(movieData);
   }, []);
+  const movieListItems = movies.map(movie => <MovieListItem key={movie.title} movie={movie} />);
   return (
     <div>
-      {movies.map(movie => <MovieListItem key={movie.title} movie={movie} />)}
+      {
+        movieListItems.length
+          ? movieListItems
+          : 'No movies matching that name were found'
+      }
     </div>
   );
 };
