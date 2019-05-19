@@ -1,18 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import MovieListItem from './MovieListItem';
 import movieData from '../exampleData';
 
-const MovieList = () => {
-  const [movies, setMovies] = useState([]);
+const MovieList = ({ movies, addMovies }) => {
   useEffect(() => {
-    setMovies(movies.concat(movieData));
+    addMovies(movieData);
   }, []);
   return (
     <div>
       {movies.map(movie => <MovieListItem key={movie.title} movie={movie} />)}
     </div>
   );
+};
+
+MovieList.defaultProps = {
+  movies: [],
+  addMovies: () => {},
+};
+
+MovieList.propTypes = {
+  movies: PropTypes.arrayOf([
+    PropTypes.objectOf({
+      title: PropTypes.string,
+    }),
+  ]),
+  addMovies: PropTypes.func,
 };
 
 export default MovieList;
